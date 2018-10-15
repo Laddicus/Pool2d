@@ -13,12 +13,11 @@ public class Hole : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    // When a ball touches the hole it is destroyed
     void OnTriggerEnter2D(Collider2D Other)
     {
         if(Other.tag == "Ball")
-        {
-            Debug.Log("bwa");
+        { 
             Destroy(Other.gameObject);
         }
         
