@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4581570394158944}
   - component: {fileID: 212342357176525566}
+  - component: {fileID: 114254046775781740}
+  - component: {fileID: 114643594336472656}
   m_Layer: 0
   m_Name: Pointer
   m_TagString: Untagged
@@ -34,12 +36,55 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065074613184228}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -6.28461, y: 0, z: 0}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &114254046775781740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065074613184228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9299214878514a143a758c1b11f33fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114643594336472656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065074613184228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 192
+    i1: 46
+    i2: 175
+    i3: 212
+    i4: 110
+    i5: 149
+    i6: 188
+    i7: 36
+    i8: 56
+    i9: 193
+    i10: 240
+    i11: 148
+    i12: 191
+    i13: 96
+    i14: 112
+    i15: 14
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &212342357176525566
 SpriteRenderer:
   m_ObjectHideFlags: 1

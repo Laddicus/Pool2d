@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Point : MonoBehaviour {
+public class Point : NetworkBehaviour{
 
     Camera cam;
 
@@ -10,17 +11,24 @@ public class Point : MonoBehaviour {
     Vector3 ballPosition;
     Vector3 displacement;
 
+    GameObject CueBall;
     float angle;
 
     // Use this for initialization
     void Start () {
+        CueBall = GameObject.FindGameObjectWithTag("CueBall");
         cam = GameObject.FindObjectOfType<Camera>();
         Cursor.visible = false;
         CursorLockMode wantedMode = CursorLockMode.Confined;
     }
-	
+
 	// Update is called once per update
 	void FixedUpdate () {
+        // Follow ball
+        transform.position = ballPosition;
+
+        if (!CueBall.GetComponent<Movement>().isLocked)
+        {
         // angle stuff to rotate the pointer towards the mouse
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
@@ -31,8 +39,6 @@ public class Point : MonoBehaviour {
 
         angle = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg - 90;
         transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        // Follow ball
-        transform.position = ballPosition;
+        }
     }
 }

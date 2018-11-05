@@ -20,12 +20,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4768550136068928}
   - component: {fileID: 212891974667394214}
-  - component: {fileID: 114239340311306362}
   - component: {fileID: 58563352478228432}
   - component: {fileID: 50126187496813276}
+  - component: {fileID: 114026146703681904}
+  - component: {fileID: 114249133350816638}
+  - component: {fileID: 114373900693893062}
+  - component: {fileID: 114239340311306362}
   m_Layer: 8
   m_Name: CueBall
-  m_TagString: Untagged
+  m_TagString: CueBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489144377736074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 0.014, z: 0}
+  m_LocalPosition: {x: -7.5, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +58,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -78,6 +81,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114026146703681904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489144377736074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 149
+    i1: 66
+    i2: 234
+    i3: 215
+    i4: 55
+    i5: 90
+    i6: 68
+    i7: 100
+    i8: 24
+    i9: 207
+    i10: 11
+    i11: 44
+    i12: 131
+    i13: 253
+    i14: 51
+    i15: 186
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114239340311306362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,9 +124,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47522fe01cd109d488026cea571fcf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
-  maxVelocity: {x: 60, y: 100}
-  moveSpeed: 2
+  GameController: {fileID: 0}
+  isLocked: 0
+  test: 0
+--- !u!114 &114249133350816638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489144377736074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114373900693893062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489144377736074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84df8998d33e5554a8d096f9ddcbdbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ready: 0
+  SumVector: {x: 0, y: 0, z: 0}
+  SumForce: 0
 --- !u!212 &212891974667394214
 SpriteRenderer:
   m_ObjectHideFlags: 1

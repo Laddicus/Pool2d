@@ -16,9 +16,13 @@ public class Hole : MonoBehaviour {
     // When a ball touches the hole it is destroyed
     void OnTriggerEnter2D(Collider2D Other)
     {
-        if(Other.tag == "Ball")
-        { 
+        if (Other.tag == "Ball")
+        {
             Destroy(Other.gameObject);
+        }
+        else if (Other.tag == "CueBall")
+        {
+            Other.transform.position = new Vector3(0, 0, 0);
         }
         
     }
